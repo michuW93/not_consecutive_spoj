@@ -13,12 +13,20 @@ public class Main {
         if(i <= 2){
             System.out.println("NIE");
         } else {
-            for (int a = 0; a < tab.length; a++){
-                for (int b = a + 1; b < i; b = b + 2){
-                    tab[a] = b;
-                }
+            int index = 0;
+            for (int a = 0; a < tab.length; a = a + 2){
+                tab[index] = a;
+                index++;
+            }
+            for (int b = tab.length - 2; b >= 1; b = b - 2){
+                tab[index] = b;
+                index++;
             }
         }
-        Arrays.toString(tab);
+        System.out.println(Arrays.toString(tab));
     }
 }
+
+
+//4
+//0 2 4 1 3
