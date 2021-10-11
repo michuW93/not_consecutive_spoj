@@ -18,8 +18,15 @@ public class Main {
                 tab[index] = a;
                 index++;
             }
-            for (int b = tab.length - 2; b >= 1; b = b - 2){
-                tab[index] = b;
+
+            int b;
+            if((i & 1) != 0){
+                b = tab.length - 1;
+            } else {
+                b = tab.length - 2;
+            }
+            for (int c = b; c >= 1; c = c - 2){
+                tab[index] = c;
                 index++;
             }
         }
